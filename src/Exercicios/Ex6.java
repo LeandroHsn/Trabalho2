@@ -1,33 +1,22 @@
 package Exercicios;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
-
+import Classes.Fila;
 public class Ex6 {
     public static void main(String[] args) {
 
         System.out.println("Exercício 6");
 
-        Queue<Integer> fila = new LinkedList<Integer>();
+        Fila<Object> fila = new Fila<Object>(7);
         
-        fila.add(1);
-        fila.add(2);
-        fila.add(3);
-        fila.add(4);
-        fila.add(5);
-        fila.add(6);
-        fila.add(7);
+        fila.enfileirar(1);
+        fila.enfileirar(23);
+        fila.enfileirar(31);
+        fila.enfileirar(44);
+        fila.enfileirar(58);
+        fila.enfileirar(66);
 
         System.out.println("Fila impressa normal: " + fila.toString());
-        revertQueue(fila);
+        fila.inverterFila();
         System.out.println("Fila invertida: " + fila.toString());
-    }
-
-    public static void revertQueue(Queue fila){
-        Queue<Integer> filaInvertida = new LinkedList<>();         
-        for (int i = fila.size(); i > 0; i--) {
-            filaInvertida.add((Integer) fila.peek());
-        }
     }
 }

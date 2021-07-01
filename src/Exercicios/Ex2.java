@@ -10,7 +10,7 @@ public class Ex2 {
         System.out.println("Exercício 2");
 
         ArrayList<Integer> listaInteiros = new ArrayList<>();
-
+        
         listaInteiros.add(7);
         listaInteiros.add(1);
         listaInteiros.add(2);
